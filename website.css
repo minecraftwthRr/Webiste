@@ -1,19 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(to right, #4facfe, #00f2fe);
     color: #fff;
 }
+
 header {
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 3em;
+    font-weight: 700;
 }
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
 section {
     padding: 50px;
     max-width: 800px;
@@ -21,32 +34,94 @@ section {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-in-out;
 }
+
 h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     border-bottom: 2px solid #fff;
     padding-bottom: 10px;
     margin-bottom: 20px;
+    font-weight: 700;
 }
+
 p {
     font-size: 1.2em;
     line-height: 1.6;
 }
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+ul li:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+a {
+    color: #00f2fe;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #4facfe;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
 }
+
 .contact-form input, .contact-form textarea {
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
     border: none;
     border-radius: 5px;
+    font-size: 1em;
+    color: #333;
 }
+
 .contact-form button {
-    padding: 10px;
+    padding: 15px;
     background: #00f2fe;
     border: none;
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background: #4facfe;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
